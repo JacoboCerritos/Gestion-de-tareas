@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="font-family: Arial, sans-serif; background-image: url('{{ url_for('static', filename='black_fondo.jpg') }}'); background-size: cover; background-position: center; margin: 0; padding: 15px; color: #ffffff;">
+    <h1>Lista de Tareas</h1>
+    <img src="{{ url_for('static', filename='tarea.png') }}" alt="Logo" class="logo"> 
+    <form action="{{ url_for('add_task') }}" method="post">
+        <input type="text" name="task" required>
+        <button type="submit">Agregar</button>
+    </form>
+   
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.name }} 
+                <a href="{{ url_for('complete_task', task_id=task.id) }}">Completar</a>
+                <a href="{{ url_for('delete_task', task_id=task.id) }}">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

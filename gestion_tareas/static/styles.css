@@ -1,0 +1,85 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3efef;
+    margin: 45;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px; /* Centra la imagen y agrega margen inferior */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.task-list li.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.task-list a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.task-list a:hover {
+    text-decoration: underline;
+}
